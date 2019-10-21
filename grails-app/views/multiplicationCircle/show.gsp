@@ -42,7 +42,9 @@
 <svg width="400" height="400">
     <circle r="198" cx="200" cy="200"/>
 
-    <!-- TODO: Display the lines computed on server side here. -->
+    <g:each var = "line" in = "${circleInstance.lines}">
+        <line x1 = "${line.x1}" x2 = "${line.x2}" y1 = "${line.y1}" y2 = "${line.y2}" />
+    </g:each>
 </svg>
 
 </body>
